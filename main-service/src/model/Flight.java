@@ -24,7 +24,7 @@ public class Flight {
         this.flightNo = flightNo;
     }
 
-    public String getDepartureAirport(String dememe) {
+    public String getDepartureAirport() {
         return departureAirport;
     }
 
