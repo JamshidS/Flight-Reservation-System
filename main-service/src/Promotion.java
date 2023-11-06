@@ -23,10 +23,10 @@ public class Promotion {
     }
 
     public List<Object> getUsers() {
-        return Users;
+        return users;
     }
 
     public void setUsers(List<Object> users) {
-        Users = users;
+        users = users;
     }
 }
