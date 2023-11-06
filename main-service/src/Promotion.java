@@ -4,7 +4,7 @@ import java.util.Objects;
 public class Promotion {
     private long flightNumber;
     private int discountRate;
-    private List<Object> Users;
+    private List<Object> users;
 
     public long getFlightNumber() {
         return flightNumber;
