@@ -27,6 +27,6 @@ public class Promotion {
     }
 
     public void setUsers(List<Object> users) {
-        users = users;
+        this.users = users;
     }
 }
