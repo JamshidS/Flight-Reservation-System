@@ -14,7 +14,18 @@ public class Flight {
    private String departureDateTime;
    private Long totalSeatCount;
    private Long emptySeat;
-   private Long tickedPrice;
+
+
+   public Flight(long flightNo, String departureAirport, String arrivalAirport, String departureDateTime,Long totalSeatCount,Long emptySeat){
+
+       this.flightNo=flightNo;
+       this.departureAirport=departureAirport;
+       this.arrivalAirport=arrivalAirport;
+       this.departureDateTime =departureDateTime;
+       this.totalSeatCount=totalSeatCount;
+       this.emptySeat=emptySeat;
+
+}
 
     public Long getFlightNo() {
         return flightNo;
@@ -62,13 +73,5 @@ public class Flight {
 
     public void setEmptySeat(Long emptySeat) {
         this.emptySeat = emptySeat;
-    }
-
-    public Long getTickedPrice() {
-        return tickedPrice;
-    }
-
-    public void setTickedPrice(Long tickedPrice) {
-        this.tickedPrice = tickedPrice;
     }
 }
