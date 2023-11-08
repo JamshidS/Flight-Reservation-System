@@ -1,3 +1,5 @@
+package model;
+
 public class Ticket {
     private long ticketNo;
     private long price;
