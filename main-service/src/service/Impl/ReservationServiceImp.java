@@ -1,10 +1,12 @@
-package service;
+package service.Impl;
 
 import model.Reservation;
+import service.ReservationService;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReservationServiceImp implements ReservationService{
+public class ReservationServiceImp implements ReservationService {
 
     private List<Reservation> reservations = new ArrayList<>();
     private long nextReservationId = 1;
