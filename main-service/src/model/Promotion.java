@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public class Promotion {
     private long promotionId;
+
     private long flightNumber;
     private int discountRate;
     private List<Object> users;
@@ -16,7 +17,6 @@ public class Promotion {
     public void setPromotionId(long promotionId) {
         this.promotionId = promotionId;
     }
-
     public long getFlightNumber() {
         return flightNumber;
     }
