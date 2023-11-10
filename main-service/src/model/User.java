@@ -5,14 +5,14 @@ import java.util.List;
 public class User {
 
     private int id;
-    private List<String> passangers;
+    private List<Passenger> passangers;
     private String userName;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
-    public User(int id, List<String> passangers, String userName, String firstName, String lastName, String email, String password) {
+    public User(int id, List<Passenger> passangers, String userName, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.passangers = passangers;
         this.userName = userName;
@@ -30,11 +30,11 @@ public class User {
         this.id = id;
     }
 
-    public List<String> getPassangers() {
+    public List<Passenger> getPassangers() {
         return passangers;
     }
 
-    public void setPassangers(List<String> passangers) {
+    public void setPassangers(List<Passenger> passangers) {
         this.passangers = passangers;
     }
 
