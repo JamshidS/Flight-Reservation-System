@@ -4,7 +4,7 @@ public class Reservation {
     private long reservatiınId;
     private long flightNumber;
     private long payment;
-    private Pasanger pasanger;
+    private Passenger passenger;
 
     public long getReservatiınId() {
         return reservatiınId;
@@ -30,22 +30,23 @@ public class Reservation {
         this.payment = payment;
     }
 
-    public Pasanger getPasanger() {
-        return pasanger;
+    public Passenger getPassenger() {
+        return passenger;
     }
 
-    public void setPasanger(Pasanger pasanger) {
-        this.pasanger = pasanger;
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
     }
 
-    public Reservation(long reservatiınId, long flightNumber, long payment, Pasanger pasanger) {
+    public Reservation(long reservatiınId, long flightNumber, long payment, Passenger passenger) {
         this.reservatiınId = reservatiınId;
         this.flightNumber = flightNumber;
         this.payment = payment;
-        this.pasanger = pasanger;
+        this.passenger = passenger;
     }
 
     public Reservation() {
 
     }
 }
+

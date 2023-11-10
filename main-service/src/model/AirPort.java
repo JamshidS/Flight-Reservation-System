@@ -9,17 +9,20 @@ public class AirPort {
     private String cityName;
     private String capacity;
     private String communicationInformation;
-    private List<String> flights;  //String should be Flight class
+    private List<Flight> flights;  //String should be Flight class
 
     public AirPort(String companyName, String countryName,
                    String cityName, String capacity,
-                   String communicationInformation, List<String> flights) {
+                   String communicationInformation, List<Flight> flights) {
         this.companyName = companyName;
         this.countryName = countryName;
         this.cityName = cityName;
         this.capacity = capacity;
         this.communicationInformation = communicationInformation;
         this.flights = flights;
+    }
+
+    public AirPort() {
     }
 
     public String getCompanyName() {
@@ -62,11 +65,11 @@ public class AirPort {
         this.communicationInformation = communicationInformation;
     }
 
-    public List<String> getFlights() {
+    public List<Flight> getFlights() {
         return flights;
     }
 
-    public void setFlights(List<String> flights) {
+    public void setFlights(List<Flight> flights) {
         this.flights = flights;
     }
 }
