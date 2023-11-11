@@ -17,20 +17,21 @@ public class PassengerService {
     public Passenger findPassengerByReservationNumber(String reservationNumber) {
         for (Passenger passenger : passengers) {
             if (passenger.getReservationNumber().equals(reservationNumber)) {
-                return passenger;
+               return "Passenger found: " + passenger.toString();
             }
         }
-        return null;
+        return "Passenger not found for reservation number: " + reservationNumber;
     }
 
     // Belirli bir yolcuyu silmek için
     public void deletePassenger(String reservationNumber) {
         Passenger passengerToDelete = findPassengerByReservationNumber(reservationNumber);
         if (passengerToDelete != null) {
-            passengers.remove(passengerToDelete);
-        }
+      return "Passenger with reservation number " + reservationNumber + " successfully deleted.";
+    } else {
+        return "Passenger with reservation number " + reservationNumber + " not found. Deletion failed.";
     }
-
+}
     // Yolcuları listelemek için
     public List<Passenger> listPassengers() {
         return passengers;
