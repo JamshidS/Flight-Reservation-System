@@ -20,7 +20,7 @@ public class PassengerService {
                 return passenger;
             }
         }
-        return null;
+        return "Passenger not found for reservation number: " + reservationNumber;
     }
 
     // Belirli bir yolcuyu silmek için
@@ -28,6 +28,7 @@ public class PassengerService {
         Passenger passengerToDelete = findPassengerByReservationNumber(reservationNumber);
         if (passengerToDelete != null) {
             passengers.remove(passengerToDelete);
+            return "Passenger deleted successfully.";
         }
     }
 
