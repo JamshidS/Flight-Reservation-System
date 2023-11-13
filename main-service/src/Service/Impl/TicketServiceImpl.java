@@ -18,12 +18,12 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public Ticket getTicketByTicketNo(long ticketNo) {
-        for(Ticket ticket: ticketList) {
+        for (Ticket ticket : ticketList) {
             if (ticket.getTicketNo() == ticketNo) {
                 return ticket;
             }
         }
-        return null;
+        throw new IllegalArgumentException("Ticket not found with ticket no: " + ticketNo);
     }
 
     @Override
@@ -33,11 +33,11 @@ public class TicketServiceImpl implements TicketService {
 
     @Override
     public String cancelTicket(long ticketNo) {
-        String response = "Not able to delete. There is no ticket this ticket no.";
+        String response = "Ticket not found. Unable to cancel.";
         for(Ticket ticket: ticketList) {
             if (ticket.getTicketNo() == ticketNo) {
                 ticketList.remove(ticket);
-                response = "Ticket has been deleted successfully";
+                response = "Ticket with ticket no " + ticketNo + " has been canceled successfully.";
             }
         }
         return response;
