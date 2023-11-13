@@ -8,7 +8,7 @@ package model;
 
 public class Flight {
 
-   private Long  flightNo;
+   private Long  flightId;
    private String departureAirport;
    private String arrivalAirport;
    private String departureDateTime;
@@ -16,9 +16,15 @@ public class Flight {
    private Long emptySeat;
 
 
-   public Flight(long flightNo, String departureAirport, String arrivalAirport, String departureDateTime,Long totalSeatCount,Long emptySeat){
+    // Constructors
+    public Flight() {
+        /* Default constructor */
+    }
 
-       this.flightNo=flightNo;
+
+public Flight(long flightId, String departureAirport, String arrivalAirport, String departureDateTime,Long totalSeatCount,Long emptySeat){
+
+       this.flightId=flightId;
        this.departureAirport=departureAirport;
        this.arrivalAirport=arrivalAirport;
        this.departureDateTime =departureDateTime;
@@ -27,12 +33,13 @@ public class Flight {
 
 }
 
-    public Long getFlightNo() {
-        return flightNo;
+
+    public Long getFlightId() {
+        return flightId;
     }
 
-    public void setFlightNo(Long flightNo) {
-        this.flightNo = flightNo;
+    public void setFlightId(Long flightId) {
+        this.flightId = flightId;
     }
 
     public String getDepartureAirport() {
