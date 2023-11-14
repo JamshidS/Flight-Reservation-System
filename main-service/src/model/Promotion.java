@@ -1,14 +1,16 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
 public class Promotion {
     private long promotionId;
-
     private long flightNumber;
     private int discountRate;
     private List<Object> users;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     public long getPromotionId() {
         return promotionId;
@@ -39,5 +41,21 @@ public class Promotion {
 
     public void setUsers(List<Object> users) {
         this.users = users;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 }
