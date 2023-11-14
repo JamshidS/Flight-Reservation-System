@@ -19,8 +19,9 @@ public class PromotionServiceImpl implements PromotionService {
     }
 
     @Override
-    public void createPromotion(Promotion promotion) {
+    public String createPromotion(Promotion promotion) {
         promotionList.add(promotion);
+        return "Promotion has been created. Promotion id : " + promotion.getPromotionId() ;
     }
 
     @Override
