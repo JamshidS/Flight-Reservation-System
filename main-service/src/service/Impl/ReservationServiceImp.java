@@ -13,11 +13,12 @@ public class ReservationServiceImp implements ReservationService {
 
     //add a new reservation
     @Override
-    public void addReservation(Reservation reservation){
+    public String addReservation(Reservation reservation){
         //this part every reservation which is added assigns a new id
         reservation.setReservationId(nextReservationId++);
         //and adds the new reservation to the first list
         reservations.add(reservation);
+        return "Reservation added!";
 
     }
 
@@ -35,19 +36,21 @@ public class ReservationServiceImp implements ReservationService {
     }
 
     @Override
-    public void updateReservation(Reservation updatedReservation) {
+    public String updateReservation(Reservation updatedReservation) {
         //This line represents which reservation we want to update.
         long reservationId = updatedReservation.getReservationId();
         //if they matches remove the reservation
         reservations.removeIf(reservation -> reservation.getReservationId() == reservationId);
         //update it
         reservations.add(updatedReservation);
+        return "Reservation updatet!";
     }
 
     //delete
     @Override
-    public void deleteReservationById(long reservationId) {
+    public String deleteReservationById(long reservationId) {
         reservations.removeIf(reservation -> reservation.getReservationId() == reservationId);
+        return "Reservation deletet!";
     }
 
     //this for save the original list , returns the copied one
