@@ -3,6 +3,7 @@ package model;
 import java.util.List;
 
 public class Airline {
+    private Long airlineId;
     private String companyName;
     private List<Flight> flightList;
 
@@ -28,5 +29,13 @@ public class Airline {
 
     public void setFlightList(List<Flight> flightList) {
         this.flightList = flightList;
+    }
+
+    public Long getAirlineId() {
+        return airlineId;
+    }
+
+    public void setAirlineId(Long airlineId) {
+        this.airlineId = airlineId;
     }
 }
