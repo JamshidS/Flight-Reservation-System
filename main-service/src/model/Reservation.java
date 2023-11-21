@@ -1,17 +1,17 @@
 package model;
 
 public class Reservation {
-    private long reservatiınId;
+    private long reservationId;
     private long flightNumber;
     private long payment;
-    private Pasanger pasanger;
+    private Passenger passenger;
 
-    public long getReservatiınId() {
-        return reservatiınId;
+    public long getReservationId() {
+        return reservationId;
     }
 
-    public void setReservatiınId(long reservatiınId) {
-        this.reservatiınId = reservatiınId;
+    public void setReservationId(long reservationId) {
+        this.reservationId = reservationId;
     }
 
     public long getFlightNumber() {
@@ -30,22 +30,24 @@ public class Reservation {
         this.payment = payment;
     }
 
-    public Pasanger getPasanger() {
-        return pasanger;
+    public Passenger getPassenger() {
+        return passenger;
     }
 
-    public void setPasanger(Pasanger pasanger) {
-        this.pasanger = pasanger;
+    public void setPassenger(Passenger passenger) {
+        this.passenger = passenger;
     }
 
-    public Reservation(long reservatiınId, long flightNumber, long payment, Pasanger pasanger) {
-        this.reservatiınId = reservatiınId;
+    public Reservation(long reservationId, long flightNumber, long payment, Passenger passenger) {
+        this.reservationId = reservationId;
         this.flightNumber = flightNumber;
         this.payment = payment;
-        this.pasanger = pasanger;
+        this.passenger = passenger;
     }
 
     public Reservation() {
 
     }
+
+
 }
