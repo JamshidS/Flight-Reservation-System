@@ -4,6 +4,7 @@ import java.util.List;
 
 public class AirPort {
 
+    private Long id;
     private String companyName;
     private String countryName;
     private String cityName;
@@ -68,5 +69,13 @@ public class AirPort {
 
     public void setFlights(List<String> flights) {
         this.flights = flights;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
