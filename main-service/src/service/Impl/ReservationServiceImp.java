@@ -43,14 +43,14 @@ public class ReservationServiceImp implements ReservationService {
         reservations.removeIf(reservation -> reservation.getReservationId() == reservationId);
         //update it
         reservations.add(updatedReservation);
-        return "Reservation updatet!";
+        return "Reservation updated!";
     }
 
     //delete
     @Override
     public String deleteReservationById(long reservationId) {
         reservations.removeIf(reservation -> reservation.getReservationId() == reservationId);
-        return "Reservation deletet!";
+        return "Reservation deleted!";
     }
 
     //this for save the original list , returns the copied one
