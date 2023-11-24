@@ -3,13 +3,13 @@ package model;
 public class Ticket {
     private long ticketNo;
     private long price;
-    private String reservation;
-    // String will change to Reservation after the Reservation class merged. (also its getter&setter methods)
+    private Reservation reservation;
+    private Flight flight;
 
     public Ticket() {
     }
 
-    public Ticket(long ticketNo, long price, String reservation) {
+    public Ticket(long ticketNo, long price, Reservation reservation) {
         this.ticketNo = ticketNo;
         this.price = price;
         this.reservation = reservation;
@@ -31,11 +31,19 @@ public class Ticket {
         this.price = price;
     }
 
-    public String getReservation() {
+    public Reservation getReservation() {
         return reservation;
     }
 
-    public void setReservation(String reservation) {
+    public void setReservation(Reservation reservation) {
         this.reservation = reservation;
+    }
+
+    public Flight getFlight() {
+        return flight;
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
     }
 }
